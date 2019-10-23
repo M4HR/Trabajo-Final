@@ -1,6 +1,12 @@
 # Trabajo-Final
 Trabajo Final de Taller de Software I
 
+
+## Integrantes
+
+
+
+
 ## Propuesta de proyecto
 
 En base al pilar de la globalizacion, se propone el desarrollo de un programa que sea capaz 
