@@ -28,7 +28,7 @@ while True:
     if pregunta == "N" or pregunta == "n":
         break
 
-  
+  print(" ")
         
 
 ponderado_max= max(ponderado)
