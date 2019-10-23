@@ -28,5 +28,12 @@ while True:
     if pregunta == "N" or pregunta == "n":
         break
 
+  
+        
+
+ponderado_max= max(ponderado)
+ponderadoaceptado=[ponderado_max]
+w=ponderado.index(ponderado_max)
 print(datos)
+print("Obtuvo la beca:",nombres[w])
 
