@@ -27,4 +27,3 @@ universidades a nivel mundial.
 3. El nivel de ingles debe ser mayor a Intermedio
 4. Existe un limite de becas (10)
 5. Si el numero de estudiantes aptos son mayor al numero de becas se realizara una evaluacion entre ellos
-5. Entre otros ...
