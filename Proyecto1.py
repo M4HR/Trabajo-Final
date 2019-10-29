@@ -61,3 +61,4 @@ for i in range(len(nom_apto)):
     print(
         i+1,". Nombre:",aceptados[0][i],". Edad: ", aceptados[1][i],". Ponderado: ",aceptados[2][i],". Nivel de ingles: ",aceptados[3][i]
     )
+print(" ")
