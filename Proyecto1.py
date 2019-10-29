@@ -6,12 +6,15 @@ nombres = []
 ponderado = []
 nivel_ingles = []
 edad = []
-datos = [nombres, ponderado, nivel_ingles, edad]
+datos = [nombres, edad,ponderado, nivel_ingles ]
 
 while True:
 
     n = input("Ingresa Nombre: ")
     nombres.append(n)
+
+    e = int(input("Ingresa edad: "))
+    edad.append(e)
 
     p = int(input("Ingresa ponderado: "))
     ponderado.append(p)
@@ -19,8 +22,7 @@ while True:
     ni = input("Ingresa nivel de ingles: ")
     nivel_ingles.append(ni)
 
-    e = int(input("Ingresa edad: "))
-    edad.append(e)
+   
 
     pregunta = input("Desea seguir ingresando postulantes?(S/N)")
 
@@ -28,6 +30,7 @@ while True:
         break
 
 #Proceso
+
 ponderado_max= max(ponderado)
 ponderadoaceptado=[ponderado_max]
 w=ponderado.index(ponderado_max)
