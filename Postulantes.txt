@@ -1,0 +1,20 @@
+Juan , 18 , 17 , Avanzado
+Jose , 15 , 18 , Intermedio
+Pedro , 19 , 14 , Basico
+Valeria , 17 , 18 , Avanzado
+Claudia , 18 , 18 , Intermedio
+Gabriel , 19 , 12 , Basico
+Rodrigo , 20 , 15 , Basico 
+Nicolas , 18 , 17 , Avanzado
+Sebastian , 18 , 18 , Intermedio
+Ariana , 16 , 18 , Basico 
+Nicole , 20 , 17 , Avanzado
+Camila , 18 , 17 , Intermedio
+Antonio , 17 , 17 , Avanzado
+Alberto , 18 , 16 , Intermedio
+Alonso , 18 , 16 ,Avanzado
+Sonia , 21 , 17 , Intermedio 
+Franco , 22 , 16 , Intermedio 
+Marisol , 16 , 16 , Basico
+Mateo , 18 , 18 , Avanzado
+Martin , 19 , 17 , Basico
