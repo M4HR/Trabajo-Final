@@ -37,7 +37,11 @@ edad_ap=[]
 ponde_ap=[]
 nive_ap=[]
 aceptados=[nom_apto,edad_ap,ponde_ap,nive_ap]
-aux = [nom_apto,edad_ap,ponde_ap,nive_ap]
+bec_nombre = []
+bec_pon = []
+bec_nive = []
+bec_edad = []
+becados = [bec_nombre, bec_edad, bec_pon, bec_nive]
 for i in range(len(nombres)):
     if edad[i] >= 18:
         # aceptados=[edad]
@@ -47,14 +51,26 @@ for i in range(len(nombres)):
                 # aceptados.append(nombres[i], edad[i] ,ponderado[i],nivel_ingles[i])
                 a = nombres[i]
                 nom_apto.append(a)
+                bec_nombre.append(a)
                 b = edad[i]
                 edad_ap.append(b)
+                bec_edad.append(b)
                 c = ponderado[i]
+                bec_pon.append(c)
                 ponde_ap.append(c)
                 d = nivel_ingles[i]
+                bec_nive.append(d)
                 nive_ap.append(d)
         
 # Postulantes que obtienen la beca
+if len(bec_nombre)>= 2:
+    for i in range(len(bec_nombre)):
+        for j in range(1, len(bec_nombre)):
+            if bec_pon[i]>bec_pon[j]:
+                aux = bec_pon[i]
+                bec_pon[i] = bec_pon[j+1]
+                bec_pon[j+1] = aux
+
 
 
 # Salida
