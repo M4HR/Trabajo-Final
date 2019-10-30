@@ -8,8 +8,11 @@ nivel_ingles = []
 edad = []
 datos = [nombres, edad,ponderado, nivel_ingles ]
 # Importando datos
-
-
+datos_estaticos = []
+with open("Postulantes.txt", "r") as f:
+    lineas = [linea.split() for linea in f]
+for linea in lineas:
+    print(linea)
 # Ingreso de Postulantes
 print("***INGRESAR POSTULANTES***")
 while True:
