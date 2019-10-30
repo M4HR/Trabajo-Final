@@ -7,6 +7,7 @@ ponderado = []
 nivel_ingles = []
 edad = []
 datos = [nombres, edad,ponderado, nivel_ingles ]
+# Ingreso de Postulantes
 print("***INGRESAR POSTULANTES***")
 while True:
 
@@ -30,11 +31,13 @@ while True:
         break
 
 # Proceso
+# Postulantes Aptos
 nom_apto=[]
 edad_ap=[]
 ponde_ap=[]
 nive_ap=[]
 aceptados=[nom_apto,edad_ap,ponde_ap,nive_ap]
+aux = [nom_apto,edad_ap,ponde_ap,nive_ap]
 for i in range(len(nombres)):
     if edad[i] >= 18:
         # aceptados=[edad]
@@ -55,10 +58,12 @@ for i in range(len(nombres)):
 
 
 # Salida
+# Listado de postulantes aptos
 print("***Postulantes Aptos***")
 
 for i in range(len(nom_apto)):
     print(
         i+1,". Nombre:",aceptados[0][i],". Edad: ", aceptados[1][i],". Ponderado: ",aceptados[2][i],". Nivel de ingles: ",aceptados[3][i]
     )
+# Lista de postulantes que ganaron la beca
 print(" ")
