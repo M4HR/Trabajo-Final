@@ -12,7 +12,17 @@ datos_estaticos = []
 with open("Postulantes.txt", "r") as f:
     lineas = [linea.split() for linea in f]
 for linea in lineas:
-    print(linea)
+    aux_dato = linea
+    aux_nom = linea[0]
+    aux_edad = linea[1]
+    aux_edad = int(aux_edad)
+    aux_pon = linea[2]
+    aux_pon = int(aux_pon)
+    aux_ni = linea[3]
+    nombres.append(aux_nom)
+    edad.append(aux_edad)
+    ponderado.append(aux_pon)
+    nivel_ingles.append(aux_ni)
 # Ingreso de Postulantes
 print("***INGRESAR POSTULANTES***")
 while True:

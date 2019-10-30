@@ -1,4 +1,4 @@
-Juan 18 m17 Avanzado
+Juan 18 17 Avanzado
 Jose 15 18 Intermedio
 Pedro 19 14 Basico
 Valeria 17 18 Avanzado
