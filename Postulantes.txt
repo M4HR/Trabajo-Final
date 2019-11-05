@@ -18,3 +18,5 @@ Franco 22 16 Intermedio
 Marisol 16 16 Basico
 Mateo 18 18 Avanzado
 Martin 19 17 Basico
+Felipe 19 20 avanzado
+Marcos 19 16 basico

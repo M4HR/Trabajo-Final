@@ -1,7 +1,7 @@
-# Entrada
 import os
+import random
 os.system("cls") 
-
+# Entrada
 nombres = []
 ponderado = []
 nivel_ingles = []
@@ -26,21 +26,18 @@ for linea in lineas:
 # Ingreso de Postulantes
 print("***INGRESAR POSTULANTES***")
 while True:
-
+    agregar = open("Postulantes.txt", "a")
     n = input("Ingresa Nombre: ")
     nombres.append(n)
-
     e = int(input("Ingresa edad: "))
     edad.append(e)
-
     p = int(input("Ingresa ponderado: "))
     ponderado.append(p)
-
     ni = input("Ingresa nivel de ingles: ")
     nivel_ingles.append(ni)
 
-   
-
+    agregar.write("\n"+n+" "+str(e)+" "+str(p)+" "+ni)
+    agregar.close()
     pregunta = input("Desea seguir ingresando postulantes?(S/N)")
 
     if pregunta == "N" or pregunta == "n":
@@ -58,6 +55,11 @@ bec_pon = []
 bec_nive = []
 bec_edad = []
 becados = [bec_nombre, bec_edad, bec_pon, bec_nive]
+cop_nombre = []
+cop_pon = []
+cop_nive = []
+cop_edad = []
+copia = [cop_nombre, cop_edad, cop_pon, cop_nive]
 for i in range(len(nombres)):
     if edad[i] >= 18:
         # aceptados=[edad]
@@ -67,18 +69,38 @@ for i in range(len(nombres)):
                 # aceptados.append(nombres[i], edad[i] ,ponderado[i],nivel_ingles[i])
                 a = nombres[i]
                 nom_apto.append(a)
-                bec_nombre.append(a)
+                cop_nombre.append(a)
                 b = edad[i]
                 edad_ap.append(b)
-                bec_edad.append(b)
+                cop_edad.append(b)
                 c = ponderado[i]
-                bec_pon.append(c)
+                cop_pon.append(c)
                 ponde_ap.append(c)
                 d = nivel_ingles[i]
-                bec_nive.append(d)
+                cop_nive.append(d)
                 nive_ap.append(d)
         
 # Postulantes que obtienen la beca
+a = len(aceptados[0])
+
+if a > 10:
+    for i in range(len(cop_nombre)):
+        aux = max(copia[2])
+        aux2 = aux
+        pos = cop_pon.index(aux)              
+        if len(becados[0]) < 10:
+            bec_nombre.append(copia[0][pos])
+            copia[0].remove(copia[0][pos])
+            bec_edad.append(copia[1][pos])
+            copia[1].remove(copia[1][pos])
+            bec_pon.append(copia[2][pos])
+            copia[2].remove(copia[2][pos])
+            bec_nive.append(copia[3][pos])
+            copia[3].remove(copia[3][pos])
+
+
+
+'''
 if len(bec_nombre)>= 2:
     for i in range(len(bec_nombre)):
         for j in range(1, len(bec_nombre)):
@@ -96,6 +118,7 @@ if len(bec_nombre)>= 2:
                 bec_nive[i] = bec_nive[j]
                 bec_nive[j] = aux3
 
+'''
 # Salida
 # Listado de postulantes aptos
 print("***Postulantes Aptos***")
