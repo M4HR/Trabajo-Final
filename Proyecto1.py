@@ -103,7 +103,7 @@ vez = 1
 print(bec_pon[1])
 for z in range(len(becados[0])):
     for i in range(1,len(becados[0])):
-        if becados[2][z] != becados[2][i] :
+        if becados[2][z] != becados[2][i] and vez = 1:
             contador += 1
             vez += 1
         elif becados[2][z] == becados[2][i]: 
