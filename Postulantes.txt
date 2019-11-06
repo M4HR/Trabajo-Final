@@ -20,3 +20,6 @@ Mateo 18 18 Avanzado
 Martin 19 17 Basico
 Felipe 19 20 avanzado
 Marcos 19 16 basico
+ty 20 21 avanzado
+rtyt 20 20 avanzado
+grh 21 15 avanzado
