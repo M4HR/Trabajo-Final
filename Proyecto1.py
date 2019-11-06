@@ -27,10 +27,16 @@ for linea in lineas:
 print("***INGRESAR POSTULANTES***")
 while True:
     agregar = open("Postulantes.txt", "a")
-    n = input("Ingresa Nombre: ")
-    nombres.append(n)
-    e = int(input("Ingresa edad: "))
-    edad.append(e)
+   
+    n = input("Ingresa Nombre: ")     
+    nombres.append(n)        
+    while True:
+        e = int(input("Ingresa edad: "))
+        if e>=15:
+            edad.append(e)
+            break
+        else:
+            print("Ingrese edad mayor a 14")
     while True:       
         p = int(input("Ingresa ponderado: "))
         if p>=0 and p<=20:
