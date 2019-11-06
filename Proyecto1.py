@@ -36,11 +36,15 @@ while True:
         if p>=0 and p<=20:
             ponderado.append(p)
             break
+        else:
+            print("Ingrese nota ponderada entre 0 y 20")
     while True:
         ni = input("Ingresa nivel de ingles: ")
         if ni== "Intermedio" or ni =="intermedio"or  ni =="Avanzado"or  ni =="avanzado" or ni=="Basico" or ni=="basico":
             nivel_ingles.append(ni)
             break
+        else:
+            print("El nivel de ingles debe ser Avanzado , Intermedio o Basico")
 
     agregar.write("\n"+n+" "+str(e)+" "+str(p)+" "+ni)
     agregar.close()
