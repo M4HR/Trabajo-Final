@@ -20,10 +20,4 @@ Mateo 18 18 Avanzado
 Martin 19 17 Basico
 Felipe 19 20 avanzado
 Marcos 19 16 basico
-<<<<<<< HEAD
 Sofia 21 20 Avanzado
-=======
-ty 20 21 avanzado
-rtyt 20 20 avanzado
-grh 21 15 avanzado
->>>>>>> 7dbd7ef0c1e5b4c1ddf242082dc317c9f35d2892

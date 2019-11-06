@@ -104,15 +104,15 @@ if a > 10:
             bec_nive.append(copia[3][pos])
             copia[3].remove(copia[3][pos])
 # Si las notas son iguales:
-
+'''
 for i in range(len(bec_nombre)):
     for j in range(len(bec_nombre)):
         print(i,j)
         
 
-'''
 
-'''
+
+
 if len(bec_nombre)>= 2:
     for i in range(len(bec_nombre)):
         for j in range(1, len(bec_nombre)):
