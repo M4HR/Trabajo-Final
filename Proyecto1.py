@@ -31,10 +31,16 @@ while True:
     nombres.append(n)
     e = int(input("Ingresa edad: "))
     edad.append(e)
-    p = int(input("Ingresa ponderado: "))
-    ponderado.append(p)
-    ni = input("Ingresa nivel de ingles: ")
-    nivel_ingles.append(ni)
+    while True:       
+        p = int(input("Ingresa ponderado: "))
+        if p>=0 and p<=20:
+            ponderado.append(p)
+            break
+    while True:
+        ni = input("Ingresa nivel de ingles: ")
+        if ni== "Intermedio" or ni =="intermedio"or  ni =="Avanzado"or  ni =="avanzado" or ni=="Basico" or ni=="basico":
+            nivel_ingles.append(ni)
+            break
 
     agregar.write("\n"+n+" "+str(e)+" "+str(p)+" "+ni)
     agregar.close()
@@ -104,6 +110,7 @@ for i in range(len(bec_nombre)):
         print(i,j)
         
 
+'''
 
 '''
 if len(bec_nombre)>= 2:
