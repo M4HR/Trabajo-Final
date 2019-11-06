@@ -76,6 +76,11 @@ cop_pon = []
 cop_nive = []
 cop_edad = []
 copia = [cop_nombre, cop_edad, cop_pon, cop_nive]
+becasi_nombre = []
+becasi_pon = []
+becasi_nive = []
+becasi_edad = []
+becasi = [becasi_nombre, becasi_edad, becasi_pon, becasi_nive]
 for i in range(len(nombres)):
     if edad[i] >= 18:
         # aceptados=[edad]
@@ -114,16 +119,31 @@ if a > 10:
             bec_nive.append(copia[3][pos])
             copia[3].remove(copia[3][pos])
 # Si las notas son iguales:
-
+'''
 for i in range(len(bec_nombre)):
-    con = 0
+    # con = 0
     conta = 0
     for j in range(len(bec_nombre)):
+        con = 0
         if bec_pon[i] == bec_pon[j]:
             con += 1
-        elif con > 1 and bec_pon[i] == bec_pon[j]:
+        elif con >= 1 and bec_pon[i] == bec_pon[j]:
             conta += 1
-
+    if con == 1:
+        becasi_nombre.append(becados[0][i])
+        becasi_edad.append(becados[1][i])
+        becasi_pon.append(becados[2][i])
+        becasi_nive.append(becados[3][i])
+    elif con >= 1:
+        posi = bec_pon.index(bec_pon[i])
+        if conta <= (10-len(becasi_nombre)):
+            print(conta)
+            for w in range(conta):
+                becasi_nombre.append(becados[0][posi+w])
+                becasi_edad.append(becados[1][posi+w])
+                becasi_pon.append(becados[2][posi+w])
+                becasi_nive.append(becados[3][posi+w])
+ '''   
 # Salida
 # Listado de postulantes aptos
 print("***Postulantes Aptos***")
@@ -134,8 +154,8 @@ for i in range(len(nom_apto)):
     )
 # Lista de postulantes que ganaron la beca
 print("***Obtuvieron una beca***")
-for i in range(10):
+for i in range(len(becasi_nombre)):
     print(
-        i+1,". Nombre:",becados[0][i],". Edad: ", becados[1][i],". Ponderado: ",becados[2][i],". Nivel de ingles: ",becados[3][i]
+        i+1,". Nombre:",becasi[0][i],". Edad: ", becasi[1][i],". Ponderado: ",becasi[2][i],". Nivel de ingles: ",becasi[3][i]
     )
 print(" ")
