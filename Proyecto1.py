@@ -111,37 +111,13 @@ if a > 10:
 
 for i in range(len(bec_nombre)):
     con = 0
+    conta = 0
     for j in range(len(bec_nombre)):
-        print(i,j)
         if bec_pon[i] == bec_pon[j]:
             con += 1
         elif con > 1 and bec_pon[i] == bec_pon[j]:
-            
+            conta += 1
 
-
-        
-
-
-
-'''
-if len(bec_nombre)>= 2:
-    for i in range(len(bec_nombre)):
-        for j in range(1, len(bec_nombre)):
-            if bec_pon[i]<bec_pon[j]:
-                aux = bec_pon[i]
-                bec_pon[i] = bec_pon[j]
-                bec_pon[j] = aux
-                aux1 = bec_nombre[i]
-                bec_nombre[i] = bec_nombre[j]
-                bec_nombre[j] = aux1
-                aux2 = bec_edad[i]
-                bec_edad[i] = bec_edad[j]
-                bec_edad[j] = aux2
-                aux3 = bec_nive[i]
-                bec_nive[i] = bec_nive[j]
-                bec_nive[j] = aux3
-
-'''
 # Salida
 # Listado de postulantes aptos
 print("***Postulantes Aptos***")
