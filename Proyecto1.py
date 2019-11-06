@@ -97,23 +97,12 @@ if a > 10:
             copia[2].remove(copia[2][pos])
             bec_nive.append(copia[3][pos])
             copia[3].remove(copia[3][pos])
-contador = 0
-contador_re = 0
-vez = 1
-print(bec_pon[1])
-for z in range(len(becados[0])):
-    for i in range(1,len(becados[0])):
-        if becados[2][z] != becados[2][i] and vez = 1:
-            contador += 1
-            vez += 1
-        elif becados[2][z] == becados[2][i]: 
-            contador_re += 1 
-        elif becados[2][z] != becados[2][i] and vez >= 2:
-                contador = contador + contador_re
-                if contador > 10:
-                    print("hola")
-                else: 
-                    contador_re = 0
+# Si las notas son iguales:
+
+for i in range(len(bec_nombre)):
+    for j in range(len(bec_nombre)):
+        print(i,j)
+        
 
 
 '''
