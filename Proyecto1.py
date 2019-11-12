@@ -65,17 +65,20 @@ nom_apto=[]
 edad_ap=[]
 ponde_ap=[]
 nive_ap=[]
-aceptados=[nom_apto,edad_ap,ponde_ap,nive_ap]
+aceptados=[nom_apto,edad_ap,ponde_ap,nive_ap] # Todos los postulantes aceptados
 bec_nombre = []
 bec_pon = []
 bec_nive = []
 bec_edad = []
-becados = [bec_nombre, bec_edad, bec_pon, bec_nive]
+becados = [bec_nombre, bec_edad, bec_pon, bec_nive] # Todos los postulantes pre becados - Reduccion del arreglo de 
+# aceptados a 15 elementos y ordenado de mayor a menor
+# Copia del Arreglo de Aceptados
 cop_nombre = []
 cop_pon = []
 cop_nive = []
 cop_edad = []
 copia = [cop_nombre, cop_edad, cop_pon, cop_nive]
+# No se esta usando actualmente - Arreglo Vacio
 becasi_nombre = []
 becasi_pon = []
 becasi_nive = []
@@ -100,10 +103,18 @@ for i in range(len(nombres)):
                 d = nivel_ingles[i]
                 cop_nive.append(d)
                 nive_ap.append(d)
-        
+# Si son mas de 10 aceptados:
+Eva_nombre = []
+Eva_pon = []
+Eva_nive = []
+Eva_edad = []
+Eva_eva = []
+Eva = [Eva_nombre, Eva_edad, Eva_pon, Eva_nive]       
 # Postulantes que obtienen la beca
 a = len(aceptados[0])
 
+notas  = random.randint(0,20)
+print(notas)
 if a > 10:
     for i in range(len(cop_nombre)):
         aux = max(copia[2])
@@ -111,14 +122,28 @@ if a > 10:
         pos = cop_pon.index(aux)              
         if len(becados[0]) < 15:
             bec_nombre.append(copia[0][pos])
+            Eva_nombre.append(copia[0][pos])
             copia[0].remove(copia[0][pos])
             bec_edad.append(copia[1][pos])
+            Eva_edad.append(copia[1][pos])
             copia[1].remove(copia[1][pos])
             bec_pon.append(copia[2][pos])
+            Eva_pon.append(copia[2][pos])
             copia[2].remove(copia[2][pos])
             bec_nive.append(copia[3][pos])
+            Eva_nive.append(copia[3][pos])
             copia[3].remove(copia[3][pos])
-# Si las notas son iguales:
+else:
+    becasi_nombre.append(copia[0][pos])
+    copia[0].remove(copia[0][pos])
+    becasi_edad.append(copia[1][pos])
+    copia[1].remove(copia[1][pos])
+    becasi_pon.append(copia[2][pos])
+    copia[2].remove(copia[2][pos])
+    becasi_nive.append(copia[3][pos])
+    copia[3].remove(copia[3][pos])
+print(Eva_eva)
+
 '''
 for i in range(len(bec_nombre)):
     # con = 0
