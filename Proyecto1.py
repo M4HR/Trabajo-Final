@@ -63,40 +63,42 @@ while True:
                 break
     
     break
-
-
 # Proceso
+
+
 # Postulantes Aptos
 nom_apto=[]
 edad_ap=[]
 ponde_ap=[]
 nive_ap=[]
-aceptados=[nom_apto,edad_ap,ponde_ap,nive_ap] # Todos los postulantes aceptados
+aceptados=[nom_apto,edad_ap,ponde_ap,nive_ap] # Todos los postulantes aceptados - Bajos ciertos criterios
+
 bec_nombre = []
 bec_pon = []
 bec_nive = []
 bec_edad = []
 becados = [bec_nombre, bec_edad, bec_pon, bec_nive] # Todos los postulantes pre becados - Reduccion del arreglo de 
 # aceptados a 15 elementos y ordenado de mayor a menor
+
 # Copia del Arreglo de Aceptados
 cop_nombre = []
 cop_pon = []
 cop_nive = []
 cop_edad = []
 copia = [cop_nombre, cop_edad, cop_pon, cop_nive]
+
 # No se esta usando actualmente - Arreglo Vacio
 becasi_nombre = []
 becasi_pon = []
 becasi_nive = []
 becasi_edad = []
-becasi = [becasi_nombre, becasi_edad, becasi_pon, becasi_nive]
+becasi = [becasi_nombre, becasi_edad, becasi_pon, becasi_nive] # (Pendiente de Borrar)
+
+# Postulantes aptos para recibir las becas
 for i in range(len(nombres)):
     if edad[i] >= 18:
-        # aceptados=[edad]
         if ponderado[i] >= 16:
-            # aceptado=[edad,ponderado]
             if nivel_ingles[i] == "Intermedio" or  nivel_ingles[i] =="intermedio"or  nivel_ingles[i] =="Avanzado"or  nivel_ingles[i] =="avanzado":
-                # aceptados.append(nombres[i], edad[i] ,ponderado[i],nivel_ingles[i])
                 a = nombres[i]
                 nom_apto.append(a)
                 cop_nombre.append(a)
@@ -109,24 +111,29 @@ for i in range(len(nombres)):
                 d = nivel_ingles[i]
                 cop_nive.append(d)
                 nive_ap.append(d)
-# Si son mas de 10 aceptados:
+# Si son mas de 10 aceptados (Borrar):
 Eva_nombre = []
 Eva_pon = []
 Eva_nive = []
 Eva_edad = []
 Eva_eva = []
-Eva = [Eva_nombre, Eva_edad, Eva_pon, Eva_nive]       
+Eva = [Eva_nombre, Eva_edad, Eva_pon, Eva_nive, Eva_eva]       
+
 # Postulantes que obtienen la beca
 a = len(aceptados[0])
-
-notas  = random.randint(0,20)
-print(notas)
+for i in range(11):
+    notas  = random.randint(0,20)
+    Eva_eva.append(notas)
+    while Eva_eva.count(notas) == 2:
+        Eva_eva.remove(notas)
+        Eva_eva.append(random.randint(0,20))
+        
 if a > 10:
     for i in range(len(cop_nombre)):
         aux = max(copia[2])
         aux2 = aux
         pos = cop_pon.index(aux)              
-        if len(becados[0]) < 15:
+        if len(becados[0]) < 12:
             bec_nombre.append(copia[0][pos])
             Eva_nombre.append(copia[0][pos])
             copia[0].remove(copia[0][pos])
@@ -140,41 +147,29 @@ if a > 10:
             Eva_nive.append(copia[3][pos])
             copia[3].remove(copia[3][pos])
 else:
-    becasi_nombre.append(copia[0][pos])
+    bec_nombre.append(copia[0][pos])
     copia[0].remove(copia[0][pos])
-    becasi_edad.append(copia[1][pos])
+    bec_edad.append(copia[1][pos])
     copia[1].remove(copia[1][pos])
-    becasi_pon.append(copia[2][pos])
+    bec_pon.append(copia[2][pos])
     copia[2].remove(copia[2][pos])
-    becasi_nive.append(copia[3][pos])
+    bec_nive.append(copia[3][pos])
     copia[3].remove(copia[3][pos])
-print(Eva_eva)
 
-'''
-for i in range(len(bec_nombre)):
-    # con = 0
-    conta = 0
-    for j in range(len(bec_nombre)):
-        con = 0
-        if bec_pon[i] == bec_pon[j]:
-            con += 1
-        elif con >= 1 and bec_pon[i] == bec_pon[j]:
-            conta += 1
-    if con == 1:
-        becasi_nombre.append(becados[0][i])
-        becasi_edad.append(becados[1][i])
-        becasi_pon.append(becados[2][i])
-        becasi_nive.append(becados[3][i])
-    elif con >= 1:
-        posi = bec_pon.index(bec_pon[i])
-        if conta <= (10-len(becasi_nombre)):
-            print(conta)
-            for w in range(conta):
-                becasi_nombre.append(becados[0][posi+w])
-                becasi_edad.append(becados[1][posi+w])
-                becasi_pon.append(becados[2][posi+w])
-                becasi_nive.append(becados[3][posi+w])
- '''   
+for i in range(10):
+    aux = max(Eva_eva)
+    pos = Eva_eva.index(aux)
+    if len(becasi[0])<=10: # and (Eva_eva.count(aux) == 1):
+        becasi_nombre.append(Eva[0][pos])
+        becasi_edad.append(Eva[1][pos])
+        becasi_pon.append(Eva[2][pos])
+        becasi_nive.append(Eva[3][pos])
+        Eva[0].remove(Eva[0][pos])
+        Eva[1].remove(Eva[1][pos])
+        Eva[2].remove(Eva[2][pos])
+        Eva[3].remove(Eva[3][pos])
+        Eva[4].remove(Eva[4][pos])
+
 # Salida
 # Listado de postulantes aptos
 print("***Postulantes Aptos***")
@@ -185,8 +180,9 @@ for i in range(len(nom_apto)):
     )
 # Lista de postulantes que ganaron la beca
 print("***Obtuvieron una beca***")
-for i in range(len(becasi_nombre)):
+for i in range(10):
     print(
         i+1,". Nombre:",becasi[0][i],". Edad: ", becasi[1][i],". Ponderado: ",becasi[2][i],". Nivel de ingles: ",becasi[3][i]
     )
+
 print(" ")

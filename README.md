@@ -14,7 +14,7 @@ En base al pilar de la globalizacion, se propone el desarrollo de un programa qu
 de seleccionar alumnos con un alto rendimiento para poder obtener beneficios academicos con 
 universidades a nivel mundial.
 
-## Eatructura
+## Estructura
 
 * Entrada: Ingreso de datos de los postulantes 
 * Proceso: Selecion de postulantes que cumplen con los requisitos
