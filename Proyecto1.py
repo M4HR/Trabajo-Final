@@ -26,38 +26,44 @@ for linea in lineas:
 # Ingreso de Postulantes
 print("***INGRESAR POSTULANTES***")
 while True:
-    agregar = open("Postulantes.txt", "a")
-   
-    n = input("Ingresa Nombre: ")     
-    nombres.append(n)        
-    while True:
-        e = int(input("Ingresa edad: "))
-        if e>=15:
-            edad.append(e)
-            break
-        else:
-            print("Ingrese edad mayor a 14")
-    while True:       
-        p = int(input("Ingresa ponderado: "))
-        if p>=0 and p<=20:
-            ponderado.append(p)
-            break
-        else:
-            print("Ingrese nota ponderada entre 0 y 20")
-    while True:
-        ni = input("Ingresa nivel de ingles: ")
-        if ni== "Intermedio" or ni =="intermedio"or  ni =="Avanzado"or  ni =="avanzado" or ni=="Basico" or ni=="basico":
-            nivel_ingles.append(ni)
-            break
-        else:
-            print("El nivel de ingles debe ser Avanzado , Intermedio o Basico")
+    t=input("Desea ingresar postulante?(S/N) ")
+    if t =="s"or t=="S":
+        while True:
+            agregar = open("Postulantes.txt", "a")
+        
+            n = input("Ingresa Nombre: ")     
+            nombres.append(n)        
+            while True:
+                e = int(input("Ingresa edad: "))
+                if e>=15:
+                    edad.append(e)
+                    break
+                else:
+                    print("Ingrese edad mayor a 14")
+            while True:       
+                p = int(input("Ingresa ponderado: "))
+                if p>=0 and p<=20:
+                    ponderado.append(p)
+                    break
+                else:
+                    print("Ingrese nota ponderada entre 0 y 20")
+            while True:
+                ni = input("Ingresa nivel de ingles: ")
+                if ni== "Intermedio" or ni =="intermedio"or  ni =="Avanzado"or  ni =="avanzado" or ni=="Basico" or ni=="basico":
+                    nivel_ingles.append(ni)
+                    break
+                else:
+                    print("El nivel de ingles debe ser Avanzado , Intermedio o Basico")
 
-    agregar.write("\n"+n+" "+str(e)+" "+str(p)+" "+ni)
-    agregar.close()
-    pregunta = input("Desea seguir ingresando postulantes?(S/N)")
+            agregar.write("\n"+n+" "+str(e)+" "+str(p)+" "+ni)
+            agregar.close()
+            pregunta = input("Desea seguir ingresando postulantes?(S/N)")
 
-    if pregunta == "N" or pregunta == "n":
-        break
+            if pregunta == "N" or pregunta == "n":
+                break
+    
+    break
+
 
 # Proceso
 # Postulantes Aptos
