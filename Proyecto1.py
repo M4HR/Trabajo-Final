@@ -8,7 +8,7 @@ nivel_ingles = []
 edad = []
 datos = [nombres, edad,ponderado, nivel_ingles ]
 # Importando datos
-datos_estaticos = []
+
 with open("Postulantes.txt", "r") as f:
     lineas = [linea.split() for linea in f]
 for linea in lineas:
@@ -77,8 +77,7 @@ bec_nombre = []
 bec_pon = []
 bec_nive = []
 bec_edad = []
-becados = [bec_nombre, bec_edad, bec_pon, bec_nive] # Todos los postulantes pre becados - Reduccion del arreglo de 
-# aceptados a 15 elementos y ordenado de mayor a menor
+becados = [bec_nombre, bec_edad, bec_pon, bec_nive] 
 
 # Copia del Arreglo de Aceptados
 cop_nombre = []
@@ -87,12 +86,12 @@ cop_nive = []
 cop_edad = []
 copia = [cop_nombre, cop_edad, cop_pon, cop_nive]
 
-# No se esta usando actualmente - Arreglo Vacio
+
 becasi_nombre = []
 becasi_pon = []
 becasi_nive = []
 becasi_edad = []
-becasi = [becasi_nombre, becasi_edad, becasi_pon, becasi_nive] # (Pendiente de Borrar)
+becasi = [becasi_nombre, becasi_edad, becasi_pon, becasi_nive] 
 
 # Postulantes aptos para recibir las becas
 for i in range(len(nombres)):
@@ -121,7 +120,7 @@ Eva = [Eva_nombre, Eva_edad, Eva_pon, Eva_nive, Eva_eva]
 
 # Postulantes que obtienen la beca
 a = len(aceptados[0])
-for i in range(11):
+for i in range(len(cop_nombre)):
     notas  = random.randint(0,20)
     Eva_eva.append(notas)
     while Eva_eva.count(notas) == 2:
@@ -133,33 +132,33 @@ if a > 10:
         aux = max(copia[2])
         aux2 = aux
         pos = cop_pon.index(aux)              
-        if len(becados[0]) < 12:
-            bec_nombre.append(copia[0][pos])
-            Eva_nombre.append(copia[0][pos])
-            copia[0].remove(copia[0][pos])
-            bec_edad.append(copia[1][pos])
-            Eva_edad.append(copia[1][pos])
-            copia[1].remove(copia[1][pos])
-            bec_pon.append(copia[2][pos])
-            Eva_pon.append(copia[2][pos])
-            copia[2].remove(copia[2][pos])
-            bec_nive.append(copia[3][pos])
-            Eva_nive.append(copia[3][pos])
-            copia[3].remove(copia[3][pos])
+        
+        bec_nombre.append(copia[0][pos])
+        Eva_nombre.append(copia[0][pos])
+        copia[0].remove(copia[0][pos])
+        bec_edad.append(copia[1][pos])
+        Eva_edad.append(copia[1][pos])
+        copia[1].remove(copia[1][pos])
+        bec_pon.append(copia[2][pos])
+        Eva_pon.append(copia[2][pos])
+        copia[2].remove(copia[2][pos])
+        bec_nive.append(copia[3][pos])
+        Eva_nive.append(copia[3][pos])
+        copia[3].remove(copia[3][pos])
 else:
-    bec_nombre.append(copia[0][pos])
+    becasi_nombre.append(copia[0][pos])
     copia[0].remove(copia[0][pos])
-    bec_edad.append(copia[1][pos])
+    becasi_edad.append(copia[1][pos])
     copia[1].remove(copia[1][pos])
-    bec_pon.append(copia[2][pos])
+    becasi_pon.append(copia[2][pos])
     copia[2].remove(copia[2][pos])
-    bec_nive.append(copia[3][pos])
+    becasi_nive.append(copia[3][pos])
     copia[3].remove(copia[3][pos])
 
 for i in range(10):
     aux = max(Eva_eva)
     pos = Eva_eva.index(aux)
-    if len(becasi[0])<=10: # and (Eva_eva.count(aux) == 1):
+    if len(becasi[0])<=10: 
         becasi_nombre.append(Eva[0][pos])
         becasi_edad.append(Eva[1][pos])
         becasi_pon.append(Eva[2][pos])
