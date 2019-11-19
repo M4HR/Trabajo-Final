@@ -189,4 +189,4 @@ for i in range(len(becasi_nombre)):
         i+1,". Nombre:",becasi[0][i],". Edad: ", becasi[1][i],". Ponderado: ",becasi[2][i],". Nivel de ingles: ",becasi[3][i]
     )
 
-print("***Fin de Procesos de Beca***")
+print("***FIN DE LA APLICACION**")
