@@ -145,20 +145,9 @@ if a > 10:
         bec_nive.append(copia[3][pos])
         Eva_nive.append(copia[3][pos])
         copia[3].remove(copia[3][pos])
-else:
-    becasi_nombre.append(copia[0][pos])
-    copia[0].remove(copia[0][pos])
-    becasi_edad.append(copia[1][pos])
-    copia[1].remove(copia[1][pos])
-    becasi_pon.append(copia[2][pos])
-    copia[2].remove(copia[2][pos])
-    becasi_nive.append(copia[3][pos])
-    copia[3].remove(copia[3][pos])
-
-for i in range(10):
-    aux = max(Eva_eva)
-    pos = Eva_eva.index(aux)
-    if len(becasi[0])<=10: 
+    for i in range(10):
+        aux = max(Eva_eva)
+        pos = Eva_eva.index(aux)
         becasi_nombre.append(Eva[0][pos])
         becasi_edad.append(Eva[1][pos])
         becasi_pon.append(Eva[2][pos])
@@ -168,6 +157,22 @@ for i in range(10):
         Eva[2].remove(Eva[2][pos])
         Eva[3].remove(Eva[3][pos])
         Eva[4].remove(Eva[4][pos])
+else:
+
+    for i in range(len(cop_nombre)):
+        aux = max(copia[2])
+        aux2 = aux
+        pos = cop_pon.index(aux)
+        becasi_nombre.append(copia[0][pos])
+        copia[0].remove(copia[0][pos])
+        becasi_edad.append(copia[1][pos])
+        copia[1].remove(copia[1][pos])
+        becasi_pon.append(copia[2][pos])
+        copia[2].remove(copia[2][pos])
+        becasi_nive.append(copia[3][pos])
+        copia[3].remove(copia[3][pos])
+
+
 
 # Salida
 # Listado de postulantes aptos
@@ -179,9 +184,9 @@ for i in range(len(nom_apto)):
     )
 # Lista de postulantes que ganaron la beca
 print("***Obtuvieron una beca***")
-for i in range(10):
+for i in range(len(becasi_nombre)):
     print(
         i+1,". Nombre:",becasi[0][i],". Edad: ", becasi[1][i],". Ponderado: ",becasi[2][i],". Nivel de ingles: ",becasi[3][i]
     )
 
-print(" ")
+print("***Fin de Procesos de Beca***")
